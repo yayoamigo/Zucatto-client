@@ -1,8 +1,8 @@
 import { Badge } from "@mui/material";
 import { Search, ShoppingCartOutlined } from "@mui/icons-material";
-import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+
 
 const Container = styled.div`
   height: 60px;
@@ -78,13 +78,13 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>ZUCCATTO</Logo>
+          <Logo>ZUCATTO</Logo>
         </Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
           <MenuItem>
-            <Badge badgeContent={4} color="primary">
+            <Badge badgeContent={4} color="warning">
               <ShoppingCartOutlined />
             </Badge>
           </MenuItem>
