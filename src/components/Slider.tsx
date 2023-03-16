@@ -19,7 +19,7 @@ interface SlideProps {
 interface DataProps {
    
         id: number;
-        img: string;
+        img: any;
         title: string;
         desc: string;
         bg: string;
@@ -58,7 +58,7 @@ interface DataProps {
   const Wrapper = styled.div<WrapperProps>`
     height: 100%;
     display: flex;
-    transition: all 0.8s ease;
+    transition: all 0.7s ease;
     transform: translateX(${(props) => props.slideIndex * -100}vw);
   `;
   
@@ -81,6 +81,8 @@ interface DataProps {
   
   const Image = styled.img`
     height: 80%;
+    ${mobile("medium")({ height: "100%" })}
+    ${mobile("large")({ height: "100%" })}
   `;
   
   const InfoContainer = styled.div`

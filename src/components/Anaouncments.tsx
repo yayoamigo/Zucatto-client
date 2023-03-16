@@ -6,7 +6,7 @@ const Container = styled.div`
  height: 40px;
  display: flex;
  align-items: center;
- background-color: #e2b566;
+ background-color: #ee6a4f;
  justify-content: center;
  ${mobile("small")({ display: "none"})}
  ${mobile("medium")({ display: "none"})}
