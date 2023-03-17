@@ -7,6 +7,7 @@ import { mobile } from "../responsive";
 const Container = styled.div`
   height: 60px;
   ${mobile("small")({ height: "50px" })}
+  background-color: #fcecea;
 `;
 
 const Wrapper = styled.div`
@@ -31,7 +32,7 @@ const Language = styled.span`
 `;
 
 const SearchContainer = styled.div`
-  border: 0.5px solid lightgray;
+  border: 0.5px solid  #fcecea;
   display: flex;
   align-items: center;
   margin-left: 25px;
