@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://localhost:5000/api/";
+const BASE_URL = "http://zucaLB-1301733182.us-east-1.elb.amazonaws.com/api/";
 const token = localStorage.getItem("accessToken") || "{}";
 const TOKEN = token
 
