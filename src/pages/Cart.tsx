@@ -201,8 +201,8 @@ const Cart = () => {
         });
       }
     };
-    stripeToken && makeRequest();
-  }, [stripeToken, cart.total, navigate, cart]); // Ad
+    stripeToken && makeRequest(); // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [stripeToken, cart.total, navigate]); // Ad
 
   const handleStripeClick = () => {
     if (stripeRef && stripeRef.current) {

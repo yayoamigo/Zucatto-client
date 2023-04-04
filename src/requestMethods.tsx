@@ -2,6 +2,7 @@ import axios from "axios";
 
 const BASE_URL = "http://zucaLB-1301733182.us-east-1.elb.amazonaws.com/api/";
 const token = localStorage.getItem("accessToken") || "{}";
+console.log("Token:", token);
 const TOKEN = token
 
 export const publicRequest = axios.create({
@@ -13,6 +14,7 @@ export const publicRequest = axios.create({
 export const userRequest = axios.create({
     baseURL: BASE_URL,
     headers: {token:`Bearer ${TOKEN}`}
+   
 });
 
 
