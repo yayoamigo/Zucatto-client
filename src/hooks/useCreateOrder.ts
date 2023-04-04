@@ -1,14 +1,16 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 
 const useCreateOrder = (callback: () => void, dependencies: any[]) => {
   const hasCreatedOrder = useRef(false);
 
+  const memoizedCallback = useCallback(callback, [callback, ...dependencies]);
+
   useEffect(() => {
     if (!hasCreatedOrder.current) {
-      callback();
+      memoizedCallback();
       hasCreatedOrder.current = true;
     }
-  }, dependencies);
+  }, [memoizedCallback]);
 };
 
 export default useCreateOrder;

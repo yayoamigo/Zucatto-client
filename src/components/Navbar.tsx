@@ -61,14 +61,6 @@ const Logo = styled.img`
   ${mobile("small")({ width: "50px" })}
 `;
 
-const LogoText = styled.h1`
-  font-size: 20px;
-  font-weight: bold;
-  color: black;
-  ${mobile("small")({ fontSize: "16px" })}
-`;
-
-
 const Right = styled.div`
   flex: 1;
   display: flex;
