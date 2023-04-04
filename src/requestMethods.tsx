@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://zucaLB-1301733182.us-east-1.elb.amazonaws.com/api/";
+const BASE_URL = "https://52.205.251.111:5000/api/";
 const token = localStorage.getItem("accessToken") || "{}";
 console.log("Token:", token);
 const TOKEN = token
@@ -16,6 +16,11 @@ export const userRequest = axios.create({
     headers: {token:`Bearer ${TOKEN}`}
    
 });
+
+export const loginRequest = axios.create({
+    baseURL: "https://52.205.251.111:5000/api/",
+    headers: { 'Content-Type': 'application/json' },
+  });
 
 
 export {};
