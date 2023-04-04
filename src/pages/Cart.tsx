@@ -185,6 +185,7 @@ const Cart = () => {
     setStripeToken(token);
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const makeRequest = async () => {
       if (stripeToken) {
@@ -201,7 +202,7 @@ const Cart = () => {
       }
     };
     stripeToken && makeRequest();
-  }, [stripeToken, cart.total, navigate]); // Ad
+  }, [stripeToken, cart.total, navigate, cart]); // Ad
 
   const handleStripeClick = () => {
     if (stripeRef && stripeRef.current) {
