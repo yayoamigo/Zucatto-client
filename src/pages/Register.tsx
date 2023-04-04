@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
@@ -54,6 +55,17 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
+const Login = styled.div`
+  margin: 5px 0px;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
+
+
 const Register = () => {
   return (
     <Container>
@@ -71,6 +83,11 @@ const Register = () => {
             data in accordance with the <b>PRIVACY POLICY</b>
           </Agreement>
           <Button>CREATE</Button>
+          <Login> 
+          <Link to="/login" > 
+          <Button>LOGIN</Button>
+          </Link>
+          </Login>
         </Form>
       </Wrapper>
     </Container>
