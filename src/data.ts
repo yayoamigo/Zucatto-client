@@ -6,7 +6,7 @@ export const sliderItems = [
       img:"1.png",
       title: "SUMMER SALE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "f5fafd",
+      bg: "f0d700",
     },
     {
       id: 2,
@@ -27,18 +27,21 @@ export const sliderItems = [
   export const categories = [
     {
       id: 1,
-      img: "4.jpg",
-      title: "SHIRT STYLE!",
+      img: "/4.jpg",
+      title: "BOYS",
+      cat: "boys"
     },
     {
       id: 2,
-      img: "5.jpg",
-      title: "LOUNGEWEAR LOVE",
+      img: "/5.jpg",
+      title: "WOMEN",
+      cat: "women"
     },
     {
       id: 3,
-      img: "6.jpg",
-      title: "LIGHT JACKETS",
+      img: "/6.jpg",
+      title: "SHIRTS",
+      cat: "shirt"
     },
   ];
 
@@ -49,7 +52,7 @@ export const sliderItems = [
     },
     {
       id:2,
-      img:"7.png",
+      img:"/7.png",
     },
     {
       id:3,
@@ -57,7 +60,7 @@ export const sliderItems = [
     },
     {
       id:4,
-      img:"9.png",
+      img:"/9.png",
     },
     {
       id:5,
@@ -69,7 +72,7 @@ export const sliderItems = [
     },
     {
       id:7,
-      img:"9.png",
+      img:"/9.png",
     },
     {
       id:8,

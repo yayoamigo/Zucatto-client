@@ -2,12 +2,16 @@ import { Badge } from "@mui/material";
 import { Search, ShoppingCartOutlined } from "@mui/icons-material";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+
 
 
 const Container = styled.div`
   height: 60px;
   ${mobile("small")({ height: "50px" })}
   background-color: #fcecea;
+  z-index: 2;
 `;
 
 const Wrapper = styled.div`
@@ -16,6 +20,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   ${mobile("small")({ padding: "10px 0px" })}
+  height: 100%;
 `;
 
 const Left = styled.div`
@@ -47,13 +52,23 @@ const Input = styled.input`
 const Center = styled.div`
   flex: 1;
   text-align: center;
+  justify-content: center;
 `;
 
-const Logo = styled.h1`
-  font-weight: bold;
-    font-size: 40px;
-  ${mobile("small")({ fontSize: "24px" })}
+const Logo = styled.img`
+  width: 80px;
+  padding-top: 10px;
+  ${mobile("small")({ width: "50px" })}
 `;
+
+const LogoText = styled.h1`
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  ${mobile("small")({ fontSize: "16px" })}
+`;
+
+
 const Right = styled.div`
   flex: 1;
   display: flex;
@@ -70,6 +85,7 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
+  const quantity = useSelector((state:any) => state.cart.quantity);
   return (
     <Container>
       <Wrapper>
@@ -81,16 +97,23 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>ZUCATTO</Logo>
+          <Logo src="/ze.png" />
+         
         </Center>
         <Right>
+        <Link to="/register" style={{ textDecoration: "none" }}>
           <MenuItem>REGISTER</MenuItem>
+          </Link>
+          <Link to="/login" style={{ textDecoration: "none" }}>
           <MenuItem>SIGN IN</MenuItem>
+          </Link>
+          <Link to="/cart" style={{ textDecoration: "none" }}>
           <MenuItem>
-            <Badge badgeContent={1} color="warning">
+            <Badge badgeContent={quantity} color="warning">
               <ShoppingCartOutlined />
             </Badge>
           </MenuItem>
+          </Link>
         </Right>
       </Wrapper>
     </Container>
