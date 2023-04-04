@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { publicRequest } from "../../requestMethods";
+import { loginRequest } from "../../requestMethods";
 
 
 interface UserCredential {
@@ -19,7 +19,7 @@ const initialState = {
   
 export const login = createAsyncThunk("api/auth/login", async (userCredential: UserCredential) => {
   try{
-    const response = await publicRequest.post("/auth/login", userCredential);
+    const response = await loginRequest.post("/auth/login", userCredential);
     console.log(userCredential)
     const data = response.data;
   return data;
@@ -31,7 +31,7 @@ export const login = createAsyncThunk("api/auth/login", async (userCredential: U
 
 export const register = createAsyncThunk("api/auth/register", async (user) => {
   try {
-    await publicRequest.post("/auth/register", user);
+    await loginRequest.post("/auth/register", user);
 
   } catch (error) {
     console.log(error);
