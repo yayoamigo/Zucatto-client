@@ -44,7 +44,7 @@ const [filteredProducts, setFilteredProducts] = useState<ProductData[]>([]);
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await axios.get(cat ? `http://zucaLB-1301733182.us-east-1.elb.amazonaws.com/api/products?category=${cat}` : "http://zucaLB-1301733182.us-east-1.elb.amazonaws.com/api/products");
+        const res = await axios.get(cat ? `https://52.205.251.111:5000/api/products?category=${cat}` : "https://52.205.251.111:5000/api/products");
         setProducts(res.data);
       } catch (err) {
 
