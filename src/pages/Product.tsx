@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { publicRequest } from "../requestMethods";
 import { ProductData } from "../components/Products";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addItem } from "../redux/ducks/cartDuck";
 
 

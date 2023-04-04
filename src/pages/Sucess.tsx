@@ -21,7 +21,9 @@ interface Product {
 
 const Success = () => {
   const location = useLocation();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [data, setData] = useState(location.state.stripeData);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [cart, setCart] = useState(location.state.products);
   const currentUser = useSelector((state: RootState) => state.login.user);
   const [orderId, setOrderId] = useState(null);
