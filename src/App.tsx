@@ -13,13 +13,13 @@ import { useSelector } from "react-redux";
 function App() {
   //create routes, if there is no user, redirect to login page
   const user = useSelector((state: any) => state.login.user);
-  console.log(user)
+  
   return (
   <Router>
     <Routes>
-      <Route path="/" element={user ? <Home /> : <Navigate to="/register"/>} />
-      <Route path="/cart" element={user ? <Cart /> : <Navigate to="/register"/>} />
-      <Route path="/sucess" element={user ? <Sucess /> : <Navigate to="/register"/>} />
+      <Route path="/" element={ <Home /> } />
+      <Route path="/cart" element={<Cart /> } />
+      <Route path="/sucess" element={<Sucess /> } />
       <Route path="/login" element={user ? <Navigate to="/"/> : <Login/>} />
       <Route path="/register" element={user ? <Navigate to="/"/> : <Register/>} />
       <Route path="/product/:id" element={<Product />} />

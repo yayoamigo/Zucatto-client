@@ -169,7 +169,7 @@ const SummaryItemPrice = styled.span``;
 
 const Button = styled.button`
   width: 100%;
-  padding: 10px;
+  padding: 11px;
   background-color: black;
   color: white;
   font-weight: 600;
@@ -201,8 +201,8 @@ const Cart = () => {
         });
       }
     };
-    stripeToken && makeRequest(); // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [stripeToken, cart.total, navigate]); // Ad
+    stripeToken && makeRequest();
+  }, [stripeToken, cart.total, navigate, cart]); // Ad
 
   const handleStripeClick = () => {
     if (stripeRef && stripeRef.current) {
